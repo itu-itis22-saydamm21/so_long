@@ -6,7 +6,7 @@
 /*   By: msaydam <msaydam@42istanbul.com.tr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:36:01 by msaydam           #+#    #+#             */
-/*   Updated: 2022/12/26 14:48:21 by msaydam          ###   ########.fr       */
+/*   Updated: 2022/12/27 17:00:54 by msaydam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	place_images_in_game(t_complete *game)
 		|| game->collectable == NULL)
 	{
 		printf("invalid image\n");
-		exit_point(game);
+		system("leaks so_long");
 	}
 }
 

@@ -34,7 +34,7 @@ void	check_rectangle(t_complete *game)
 	if (!tmp)
 	{
 		printf("Map is empty.");
-		exit_point(game);
+		system("leaks so_long");
 	}
 	while (i < game->heightmap - 1)
 	{
@@ -43,6 +43,7 @@ void	check_rectangle(t_complete *game)
 		{
 			printf("there must be walls or ");
 			printf("the map must be a rectangle\n");
+			system("leaks so_long");
 			exit_point(game);
 		}
 		i++;
