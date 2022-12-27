@@ -16,7 +16,7 @@ static size_t	ft_strlenn(const char *s)
 {
 	size_t	len;
 
-	if (s == NULL)
+	if (!s)
 		return (0);
 	len = 0;
 	while (s[len] != '\0')
@@ -38,9 +38,11 @@ void	check_rectangle(t_complete *game)
 	}
 	while (i < game->heightmap - 1)
 	{
-		if (tmp != ft_strlenn(game->map[i]))
+		if (tmp != ft_strlenn(game->map[i])
+			|| tmp - 2 != ft_strlenn(game->map[game->heightmap - 1]))
 		{
-			printf("The map must be a rectangle\n");
+			printf("there must be walls or ");
+			printf("the map must be a rectangle\n");
 			exit_point(game);
 		}
 		i++;
@@ -78,10 +80,10 @@ void	map_path_controls(char *str, t_complete *game)
 	while (str[i])
 		i++;
 	i = i - 4;
-	if (str[i] != '.'
-		&& str[i + 1] != 'b'
-		&& str[i + 2] != 'e'
-		&& str[i + 3] != 'r')
+	if (!(str[i] == '.'
+			&& str[i + 1] == 'b'
+			&& str[i + 2] == 'e'
+			&& str[i + 3] == 'r'))
 	{
 		printf("second argument should finish with '.ber'\n");
 		exit_point(game);
