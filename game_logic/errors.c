@@ -25,7 +25,7 @@ static void	count_checker(t_complete *game, int height, int width)
 		exit_point(game);
 	}
 	if (game->map[height][width] == 'C')
-			game->columncount++;
+			game->collectiblecount++;
 	if (game->map[height][width] == 'P')
 			game->playercount++;
 	if (game->map[height][width] == 'E')
@@ -48,7 +48,7 @@ void	character_valid(t_complete *game)
 		}
 		height++;
 	}
-	if (!(game->playercount == 1 && game->columncount > 1
+	if (!(game->playercount == 1 && game->collectiblecount >= 1
 			&& game->exitcount == 1))
 	{
 		printf("Error\nSomething is wrong!\n");
