@@ -41,7 +41,10 @@ int	main(int argc, char **argv)
 	t_complete	game;
 
 	if (argc != 2)
+	{
+		printf("enter two argv");
 		return (0);
+	}
 	ft_memset(&game, 0, sizeof(t_complete));
 	map_reading(&game, argv);
 	check_errors(&game);

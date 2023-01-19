@@ -105,7 +105,7 @@ int	map_reading(t_complete *game, char **argv)
 	}
 	close (game->fd);
 	free(readmap);
-	check_rectangle(game);
 	game->widthmap = ft_strlenn(game->map[0]);
+	check_rectangle(game);
 	return (1);
 }
