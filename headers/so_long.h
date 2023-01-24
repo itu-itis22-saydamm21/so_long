@@ -27,7 +27,7 @@ typedef struct t_start
 	int		heightmap;
 	int		widthmap;
 	int		playercount;
-	int		columncount;
+	int		collectablecount;
 	int		exitcount;
 	int		x_axis;
 	int		y_axis;
